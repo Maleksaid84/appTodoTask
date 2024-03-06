@@ -1,38 +1,76 @@
-.App {
+/* App.css   */
+
+.App{
+
+  
+  background-color: rgb(128, 62, 214);
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  align-items: center;
+  min-height: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Adduser {
+  display: flex;
+  flex-direction: column; /* Aligner les éléments verticalement */
+  
+  color: rgb(23, 23, 47);
+  text-align: center;
+}
+.Adduser button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 25%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.UserList{
+
+  display: flex;
+  flex-direction: row; /* Aligner les éléments verticalement */
+  align-items: center; /* Centrer les éléments horizontalement */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: azure;
+  text-shadow: #271d1d;
+
+  text-align: center;
+}
+form {
+
+  display: flex;
+  justify-content: right;
+  
+}
+
+.Addus{
+
+  text-align: right;
+}
+
+input {
+  margin-top: 25px;
+  height: 50px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  
+}
+
+input[type="text"] {
+  background-color: #e8dddd;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
 }

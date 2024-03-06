@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useSelector } from 'react-redux';
+import Addtask from './components/Addtask';
+import ListTask from './components/ListTask';
+
+
+
 
 function App() {
+  // Utiliser le hook useSelector pour accéder à l'état global
+  const users = useSelector(state => state.todoReducer.users);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>ToDo App</h1>
+
+      
+
+      {/* Composant pour afficher la liste des tâches */}
+      <ListTask users={users} />
+
+      {/* Composant pour ajouter une tâche */}
+      <Addtask />
+      
     </div>
   );
 }
